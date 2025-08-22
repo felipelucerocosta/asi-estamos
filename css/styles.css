@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    color: #222;
+    line-height: 1.7; /* Un poco más de espacio entre líneas */
+    background: url("../img/fondo-tecnologia-digital-alambre-malla-red_1017-27428.avif") no-repeat center center fixed;
+    background-size: cover;
+    background-color: #311474;
+    font-size: 18px; /* Tamaño base más legible */
+}
+.parte1{
+    background: linear-gradient(to right, rgb(66, 85, 138), rgb(14, 2, 82), rgb(0, 0, 0));
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: text; 
+  color: transparent;
+    text-shadow: 2px 2px 4px rgba(114, 114, 114, 0.555);
+}
+header {
+    background: rgba(69, 5, 122, 0.233);
+    
+    text-align: center;
+    min-height: 180px;
+    max-height: 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+ h1 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif; /* Fuente moderna y clara */
+    font-weight: 800;
+    font-size: 45px;
+    margin: 0;
+    background: linear-gradient(to right, rgb(114, 5, 5), rgb(80, 12, 158), rgb(114, 5, 5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+h2{
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: rgb(151, 42, 214);
+    text-shadow: 2px 2px 6px rgba(139, 19, 19, 0.3);
+    margin: 32px 0 18px 30px;
+}
+p{
+    font-weight: bold;
+}
+
+ul{
+    font-weight: bold;
+}
+.contenedor {
+    max-width: 1200px;
+    margin: 32px auto;
+    padding: 32px 24px;
+    background: rgba(69, 5, 122, 0.233);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+
+.nosotros {
+    font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+    font-size: 20px;
+    color: #232323;
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 16px 0;
+}
+
+.nosotros h2 {
+    margin-bottom: 18px;
+    color: rgb(131, 42, 214);
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.nosotros p {
+    margin-bottom: 18px;
+}
+
+.nosotros ul {
+    margin-left: 32px;
+    padding-left: 0;
+}
+
+.nosotros li {
+    margin-bottom: 12px;
+    font-size: 1.08em;
+    list-style: disc inside;
+}
+
+.miembros h2{
+    margin-bottom: 18px;
+    color: rgb(118, 26, 194);
+    font-size: 2em;
+    text-shadow: 2px 2px 2px #000000fb;
+    margin-left: 130px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .contenedor {
+        padding: 16px 6px;
+    }
+    h1, .parte1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 22px;
+        margin-left: 10px;
+    }
+}
+
