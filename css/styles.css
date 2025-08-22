@@ -113,6 +113,87 @@ ul{
     margin-left: 130px;
 }
 
+/* Carrusel de miembros: 3 visibles en desktop */
+.carrusel {
+    display: flex;
+    overflow-x: auto;
+    gap: 32px;
+    padding: 24px 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: #4a2858 #416568;
+}
+
+.miembro {
+    flex: 0 0 calc((100% - 64px) / 3); /* 3 miembros visibles, gap de 32px entre ellos */
+    max-width: 340px;
+    min-width: 220px;
+    background: rgba(61, 96, 100, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(60,3,87,0.13);
+    padding: 24px 18px 18px 18px;
+    text-align: center;
+    scroll-snap-align: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+}
+
+.miembro:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 32px rgba(60,3,87,0.22);
+}
+
+.miembro img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 4px solid #8e44ad;
+    margin-bottom: 16px;
+    background: #62097980;
+    box-shadow: 0 2px 8px #8e44ad33;
+}
+
+.miembro h3 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.2em;
+    color: #8e44ad;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.miembro p {
+    font-family: 'Open Sans', 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Indicadores de carrusel */
+.carrusel-indicadores {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.carrusel-indicador {
+    width: 12px;
+    height: 12px;
+    background: #d1c4e9;
+    border-radius: 50%;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.carrusel-indicador.activo {
+    background: #8e44ad;
+}
+
 /* Responsive */
 @media (max-width: 700px) {
     .contenedor {
@@ -124,6 +205,37 @@ ul{
     h2 {
         font-size: 22px;
         margin-left: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .carrusel {
+        gap: 18px;
+    }
+    .miembro {
+        flex: 0 0 calc((100% - 18px) / 2);
+        max-width: 320px;
+        padding: 16px 8px 12px 8px;
+    }
+    .miembro img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .carrusel {
+        gap: 10px;
+        padding: 12px 0;
+    }
+    .miembro {
+        flex: 0 0 90vw;
+        max-width: 95vw;
+        padding: 12px 4px 10px 4px;
+    }
+    .miembro img {
+        width: 60px;
+        height: 60px;
     }
 }
 
